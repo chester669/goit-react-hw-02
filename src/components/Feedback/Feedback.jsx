@@ -1,9 +1,8 @@
 import React from "react";
 import styles from "./Feedback.module.css";
 
-function Feedback({ good, neutral, bad }) {
+function Feedback({ good, neutral, bad, positiveFeedback }) {
   const totalFeedback = good + neutral + bad;
-  const positiveFeedback = Math.round((good / totalFeedback) * 100);
 
   return (
     <div className={styles.statsContainer}>
